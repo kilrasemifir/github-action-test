@@ -10,7 +10,7 @@ jobs:
       - uses: webiny/action-conventional-commits@v1.0.3
   check-standard-version:
     runs-on: ubuntu-latest
-    if: success()
+    needs: check-cc
     steps:
     # Permet de récuperer le code dans le runner
       - uses: actions/checkout@v2
