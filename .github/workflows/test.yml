@@ -1,15 +1,14 @@
 name: Test
 on: [push]
 jobs:
-  check-conventional-commit:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+  
+  check-cc:
+    name: Conventional Commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-        - name: check-for-cc
-          id: check-for-cc
-          uses: agenthunt/conventional-commit-checker-action@v1.0.0
+      - uses: webiny/action-conventional-commits@v1.0.3
   check-standard-version:
     runs-on: ubuntu-latest
     steps:
