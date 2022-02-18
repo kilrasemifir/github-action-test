@@ -2,7 +2,7 @@ name: Test
 on: [push]
 jobs:
   Test1:
-    run-on: node
+    runs-on: node
     steps:
     - run: echo "lancement du test"
     - run: npx standard-version
