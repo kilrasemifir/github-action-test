@@ -6,6 +6,7 @@ jobs:
     steps:
     # Permet de récuperer le code dans le runner
       - uses: actions/checkout@v2
+        ref: develop
     # Installation de nodeJS
       - uses: actions/setup-node@v2
         with:
